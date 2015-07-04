@@ -40,6 +40,14 @@ angular
         templateUrl: 'views/viewbills.html',
         controller: 'ViewbillsCtrl'
       })
+      .when('/addMessage', {
+        templateUrl: 'views/addmessage.html',
+        controller: 'AddmessageCtrl'
+      })
+      .when('/addMessage', {
+        templateUrl: 'views/addmessage.html',
+        controller: 'AddmessageCtrl'
+      })
       .otherwise({
         redirectTo: '/add_new_product'
       });

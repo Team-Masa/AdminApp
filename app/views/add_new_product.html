@@ -1,32 +1,32 @@
- <md-toolbar layout="row">
-        <h1 style="padding-left:2%;">Add new Product</h1>
-    </md-toolbar>
-    <div layout="row" flex>
-        <div layout="column" flex id="content">
-            <md-content layout-padding>
-                <form name="addItem" method="get" ng-submit="register_product()">
-                    <div layout layout-sm="column">
-                        <md-input-container style="width:100%">
-                            <label>RFID</label>
-                            <input ng-model="item.id" required/>
-                        </md-input-container>
-                    </div>
-                    <div layout layout-sm="column">
-                        <md-input-container style="width:100%">
-                            <label>Product name</label>
-                            <input ng-model="item.name" required/>
-                        </md-input-container>
-                    </div>
-                    <div layout layout-sm="column">
-                        <md-input-container style="width:100%">
-                            <label>Product Price</label>
-                            <input type="number" ng-model="item.price" required/>
-                        </md-input-container>
-                    </div>
-                    <div layout layout-sm="column">
-                      <md-button class="md-raised md-primary" style="width:90%" ng-click="register()">Submit</md-button>
-                    </div>
-                </form>
-            </md-content>
-        </div>
+<md-toolbar layout="row">
+    <h1 style="padding-left:2%;">Add new Product</h1>
+</md-toolbar>
+<div layout="row" flex>
+    <div layout="column" flex id="content">
+        <md-content layout-padding>
+            <form name="addItem" method="get" ng-submit="register_product(addItem.$valid)">
+                <div layout layout-sm="column">
+                    <md-input-container style="width:100%">
+                        <label>RFID</label>
+                        <input ng-model="item.id" required/>
+                    </md-input-container>
+                </div>
+                <div layout layout-sm="column">
+                    <md-input-container style="width:100%">
+                        <label>Product name</label>
+                        <input ng-model="item.name" required/>
+                    </md-input-container>
+                </div>
+                <div layout layout-sm="column">
+                    <md-input-container style="width:100%">
+                        <label>Product Price</label>
+                        <input type="number" ng-model="item.price" required/>
+                    </md-input-container>
+                </div>
+                <div layout layout-sm="column">
+                    <md-button class="md-raised md-primary" style="width:90%">Submit</md-button>
+                </div>
+            </form>
+        </md-content>
     </div>
+</div>
