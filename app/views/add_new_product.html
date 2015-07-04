@@ -1,0 +1,32 @@
+ <md-toolbar layout="row">
+        <h1 style="padding-left:2%;">Add new Products</h1>
+    </md-toolbar>
+    <div layout="row" flex>
+        <div layout="column" flex id="content">
+            <md-content layout-padding>
+                <form name="addItem" method="get">
+                    <div layout layout-sm="column">
+                        <md-input-container style="width:80%">
+                            <label>RFID</label>
+                            <input ng-model="item.id" />
+                        </md-input-container>
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container style="width:80%">
+                            <label>Product name</label>
+                            <input ng-model="item.name" />
+                        </md-input-container>
+                    </div>
+                    <div layout layout-sm="column">
+                        <md-input-container style="width:80%">
+                            <label>Product Price</label>
+                            <input ng-model="item.price" />
+                        </md-input-container>
+                    </div>
+                    <div layout layout-sm="column">
+                      <md-button class="md-raised md-primary" style="width:80%">Submit</md-button>
+                    </div>
+                </form>
+            </md-content>
+        </div>
+    </div>
