@@ -1,1 +1,26 @@
-<p>This is the viewBills view.</p>
+<md-toolbar class="md-theme-light">
+    <h2 class="md-toolbar-tools">
+      <span>Bill list</span>
+    </h2>
+</md-toolbar>
+<md-content>
+    <md-list>
+        <md-list-item class="md-3-line" ng-repeat="user in bills">
+            <md-card>
+            <h3 class="bill_head">Bill</h3>
+            <div class="md-list-item-text">
+                <md-card ng-repeat="list in user">
+                    <md-card-content >
+                        <h3 class="md-title">{{list.name}}</h3>
+                        <p><b>Registered at</b> {{list.createdAt}}</p>
+                        <p><b>Price:</b>{{list.price}}</p>
+                    </md-card-content>
+
+                </md-card>
+
+            </div>
+            </md-card>
+
+        </md-list-item>
+    </md-list>
+</md-content>

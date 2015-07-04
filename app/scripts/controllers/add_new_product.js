@@ -8,7 +8,7 @@
  * Controller of the itchackApp
  */
 angular.module('itchackApp')
-    .controller('AddNewProductCtrl', function($scope, $http, $location) {
+    .controller('AddNewProductCtrl', function($scope, $http, $location, messageData) {
         $scope.awesomeThings = [
             'HTML5 Boilerplate',
             'AngularJS',
@@ -28,8 +28,10 @@ angular.module('itchackApp')
                 success(function(data, status, headers, config) {
                     // this callback will be called asynchronously
                     // when the response is available
+                    messageData.setData(data);
+                    console.log(messageData.getData());
                     $location.path("/addMessage");
-                    console.log(data);
+
                 }).
                 error(function(data, status, headers, config) {
                     // called asynchronously if an error occurs

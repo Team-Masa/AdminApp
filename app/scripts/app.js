@@ -17,7 +17,18 @@ angular
     'ngSanitize',
     'ngTouch',
     'ngMaterial'
-  ])
+  ]).
+  factory('messageData', function(){
+    var data;
+    return {
+      getData: function(){
+        return this.data;
+      },
+      setData: function(data){
+        this.data = data;
+      }
+    };
+  })
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -44,9 +55,9 @@ angular
         templateUrl: 'views/addmessage.html',
         controller: 'AddmessageCtrl'
       })
-      .when('/addMessage', {
-        templateUrl: 'views/addmessage.html',
-        controller: 'AddmessageCtrl'
+      .when('/leftPane', {
+        templateUrl: 'views/leftpane.html',
+        controller: 'LeftpaneCtrl'
       })
       .otherwise({
         redirectTo: '/add_new_product'

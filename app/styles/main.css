@@ -84,3 +84,10 @@ body {
 .md-card{
   padding: 10px;
 }
+.bill_head{
+  margin:2px;
+  padding-left: 10px;
+}
+.menu_icon{
+  font-size: 26px;
+}
