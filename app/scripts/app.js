@@ -32,6 +32,10 @@ angular
         templateUrl: 'views/add_new_product.html',
         controller: 'AddNewProductCtrl'
       })
+      .when('/homePage', {
+        templateUrl: 'views/homepage.html',
+        controller: 'HomepageCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
